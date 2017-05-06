@@ -3,7 +3,9 @@
 mylist = [10, 9, 2, 5, 3, 7, 101, 18]
 
 def find_LIS(ip_list = mylist):
-	for num in mylist:
-		print num
+    for num in mylist:
+       print(num)
 
-		
+if __name__ == '__main__':
+    find_LIS()
+
