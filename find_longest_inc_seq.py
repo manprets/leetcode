@@ -6,25 +6,17 @@ def find_LIS(ip_list = mylist):
     print('mylist: ', mylist)
     curr = None
     lenlist = len(mylist)
-    
+    max_lengths=[1]*lenlist
+
     for idx in range(lenlist):
-        seq = []
-        start = mylist[idx]
-        curr = start
-        prev = None
-        seq.append(curr)
-        # print(curr)
-        length = 1
-        for jdx in range(idx+1, len(mylist)):
-            next = mylist[jdx]
-            if curr<next:
-                seq.append(next)
-                prev = curr
-                curr = next
-                length += 1
+        curr = mylist[idx]
+        for jdx in range(idx):
+            prev = mylist[jdx]
+            if prev<curr and max_lengths[idx]<max_lengths[jdx]+1:
+                max_lengths[idx] += 1
             else:
                 pass
-        print('start: {}, seq: {}, length: {}'.format(start,seq,length))
+        print('lengths: {}'.format(max_lengths))
 
     
 
