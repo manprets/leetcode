@@ -16,7 +16,8 @@ def find_LIS(ip_list = mylist):
                 max_lengths[idx] += 1
             else:
                 pass
-        print('lengths: {}'.format(max_lengths))
+        # print('lengths: {}'.format(max_lengths))
+    return max(max_lengths)
 
     
 
